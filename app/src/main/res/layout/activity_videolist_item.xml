@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_videolist_item"
+        android:layout_width="512px"
+        android:layout_height="384px"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/tv_videolist_item_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_videolist_item_duration"
+        android:layout_alignLeft="@+id/iv_videolist_item"
+        android:textColor="@color/colorWhite1"/>
+
+    <TextView
+        android:id="@+id/tv_videolist_item_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_videolist_item"
+        android:layout_alignLeft="@+id/iv_videolist_item"
+        android:text="时长：21秒"
+        android:textColor="@color/colorWhite1"/>
+
+    <TextView
+        android:id="@+id/tv_videolist_item_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/iv_videolist_item"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="30px"
+        android:text="文字描述"
+        android:textColor="@color/colorBlack0"/>
+</RelativeLayout>

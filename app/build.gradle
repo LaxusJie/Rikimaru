@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.jie.rikimaru"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    //android基础库
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    //注解框架
+    compile 'com.jakewharton:butterknife:8.4.0'
+    //小刀注解插件
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    //视频压缩库
+    compile 'com.writingminds:FFmpegAndroid:0.3.2'
+    //dialog
+    compile 'com.afollestad.material-dialogs:commons:0.9.4.2'
+    //图片框架
+    compile 'com.github.bumptech.glide:glide:3.4.+'
+}
